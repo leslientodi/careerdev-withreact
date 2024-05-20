@@ -4,20 +4,37 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+
+
+
+    <h1>Find Your Best Career Path</h1>
+    <h2>Enter your program</h2>
+    
+    
+
+    
+    
+    
+
+    <input class="program" type="text" placeholder="eg. General Science"></input>
+    
+
+    <button onclick="
+    selectProgram();
+    
+    ">Submit</button>
+
+    <section class="program-info"></section>
+    
+    
+
+
+
+    <script src="careerdevt.js">
+
+        
+    </script>
     </div>
   );
 }
