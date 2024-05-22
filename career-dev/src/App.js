@@ -1,10 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import React from "react";
 
 
 function App() {
-  const appear =
-  <>
+  const [appear, setAppear] = React.useState("")
+  
+  
+  
+    
+
+  function selectProgram() {
+    setAppear(<>
     <p>You are offering </p> <h2>Now Enter Your Grades</h2> 
       
     <div>
@@ -49,11 +56,7 @@ function App() {
       <button onclick="careerScience();">submit</button>
     
 
-  </>
-  
-    
-
-  function selectProgram() {
+  </>)
     
 
 
