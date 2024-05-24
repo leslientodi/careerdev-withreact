@@ -5,12 +5,19 @@ import React from "react";
 
 function App() {
   const [appear, setAppear] = React.useState("")
-  const [program , setProgram] = React.useState("")
-
+  const [introData , setProgram] = React.useState(
+    {userName:"", program: ""}
+  )
+console.log(introData)
   
 
   function handleInput(event) {
-    setProgram(event.target.value)
+    setProgram(prev => {
+      return {
+        ...prev,
+        [event.target.name]: event.target.value
+      }
+    })
   }
   
   
@@ -91,10 +98,10 @@ function App() {
 
     
     
-    <input className='username' type='text' placeholder='Username' onChange={handleInput}></input>
+    <input className='username' type='text' placeholder='Username' onChange={handleInput} name='userName'></input>
     <br></br>
 
-    <input className="program" type="text" placeholder="eg. General Science" onChange={handleInput}></input>
+    <input className="program" type="text" placeholder="eg. General Science" onChange={handleInput} name='program'></input>
     
 
     <button onClick={selectProgram}>Submit</button>
