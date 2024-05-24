@@ -5,6 +5,11 @@ import React from "react";
 
 function App() {
   const [appear, setAppear] = React.useState("")
+  const [program , setProgram] = React.useState("")
+
+  function handleInput(event) {
+    console.log(event.target.value)
+  }
   
   
   
@@ -86,7 +91,7 @@ function App() {
     
     
 
-    <input className="program" type="text" placeholder="eg. General Science"></input>
+    <input className="program" type="text" placeholder="eg. General Science" onChange={handleInput}></input>
     
 
     <button onClick={selectProgram}>Submit</button>
