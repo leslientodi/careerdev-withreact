@@ -98,10 +98,10 @@ console.log(introData)
 
     
     
-    <input className='username' type='text' placeholder='Username' onChange={handleInput} name='userName'></input>
+    <input className='username' type='text' placeholder='Username' onChange={handleInput} name='userName' value={introData.userName}></input>
     <br></br>
 
-    <input className="program" type="text" placeholder="eg. General Science" onChange={handleInput} name='program'></input>
+    <input className="program" type="text" placeholder="eg. General Science" onChange={handleInput} name='program' value={introData.program}></input>
     
 
     <button onClick={selectProgram}>Submit</button>
