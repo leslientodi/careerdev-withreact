@@ -7,8 +7,10 @@ function App() {
   const [appear, setAppear] = React.useState("")
   const [program , setProgram] = React.useState("")
 
+  
+
   function handleInput(event) {
-    console.log(event.target.value)
+    setProgram(event.target.value)
   }
   
   
@@ -89,7 +91,8 @@ function App() {
 
     
     
-    
+    <input className='username' type='text' placeholder='Username' onChange={handleInput}></input>
+    <br></br>
 
     <input className="program" type="text" placeholder="eg. General Science" onChange={handleInput}></input>
     
