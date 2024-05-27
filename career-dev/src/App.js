@@ -78,7 +78,48 @@ function App() {
       </>)
 
     } else if (upperProgram==="GENERAL ARTS"){
-      setAppear(
+      setAppear(<>
+        <p>You are offering {upperProgram} </p> <h2>Now Enter Your Grades</h2> 
+          
+        <div>
+                            
+                            <ul class="elective">
+                                <li class="courses"><h3>Elective Subjects</h3></li>
+                                <li class="courses"><label>Government</label><input class='government' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>History</label><input class='history' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                        
+                                <li class="courses"><label>E-Maths</label><input class='emaths' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>Economics</label><input class='economics' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+
+                              </ul>
+                            
+                        
+                        
+                        
+                        
+                            <ul>
+                                    <li class="courses"><h3>Core Subjects</h3></li>
+                                    <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></input> </li>
+                                    <br></br>
+                                    <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></input> </li>
+                                    <br></br>
+                                    <li class="courses"><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></input> </li>
+                                    <br></br>
+                                    <li class="courses"><label>Social Studies</label><input class='social' type='number' min='1' max='9'></input> </li>
+                            
+                        
+        
+                            </ul>
+                                    
+                        </div>
+          <button onclick="careerScience();">submit</button>
+        
+    
+      </>
 
 
       )
