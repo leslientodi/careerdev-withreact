@@ -210,10 +210,60 @@ function App() {
                             </ul>
                                     
                         </div>
-          <button onclick="careerScience();">submit</button>
+          <button onclick="careerHomeEcons();">submit</button>
         
     
       </>
+
+      )
+    } else if (upperProgram === "VISUAL ARTS") {
+      setAppear(<>
+        <p>You are offering {upperProgram} </p> <h2>Now Enter Your Grades</h2> 
+          
+        <div>
+                            
+                            <ul class="elective">
+                                <li class="courses"><h3>Elective Subjects</h3></li>
+                                <li class="courses"><label>General Knowledge in Art</label><input class='gka' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>Textiles</label><input class='textiles' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                        
+                                <li class="courses"><label>Picture making</label><input class='picture' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>Ceramics & Sculpture</label><input class='ceramics' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>Basketry</label><input class='basketry' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>Graphic Design</label><input class='graphic' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>Leather work</label><input class='leather' type='number' min='1' max='9'></input> </li>
+                            </ul>
+                            
+                        
+                        
+                        
+                        
+                            <ul>
+                                    <li class="courses"><h3>Core Subjects</h3></li>
+                                    <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></input> </li>
+                                    <br></br>
+                                    <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></input> </li>
+                                    <br></br>
+                                    <li class="courses"><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></input> </li>
+                                    <br></br>
+                                    <li class="courses"><label>Social Studies</label><input class='social' type='number' min='1' max='9'></input> </li>
+                            
+                        
+        
+                            </ul>
+                                    
+                        </div>
+          <button onclick="careerVisualArts();">submit</button>
+        
+    
+      </>
+
 
       )
     }
