@@ -116,11 +116,57 @@ function App() {
                             </ul>
                                     
                         </div>
-          <button onclick="careerScience();">submit</button>
+          <button onclick="careerGeneralArts();">submit</button>
         
     
       </>
 
+
+      )
+    } else if (upperProgram === "BUSINESS"){
+      setAppear(<>
+        <p>You are offering {upperProgram} </p> <h2>Now Enter Your Grades</h2> 
+          
+        <div>
+                            
+                            <ul class="elective">
+                                <li class="courses"><h3>Elective Subjects</h3></li>
+                                <li class="courses"><label>Financial Accounting</label><input class='physics' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>Business Management</label><input class='chemistry' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                        
+                                <li class="courses"><label>E-Maths</label><input class='biology' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>Economics</label><input class='biology' type='number' min='1' max='9'></input> </li>
+                                <br></br>
+                                <li class="courses"><label>Cost Accounting</label><input class='ict' type='number' min='1' max='9'></input> </li>
+                    
+                            </ul>
+                            
+                        
+                        
+                        
+                        
+                            <ul>
+                                    <li class="courses"><h3>Core Subjects</h3></li>
+                                    <li class="courses"><label>C-Maths</label><input class='cmaths' type='number' min='1' max='9'></input> </li>
+                                    <br></br>
+                                    <li class="courses"><label>English</label><input class='english' type='number' min='1' max='9'></input> </li>
+                                    <br></br>
+                                    <li class="courses"><label>Int-Science</label><input class='intScience' type='number' min='1' max='9'></input> </li>
+                                    <br></br>
+                                    <li class="courses"><label>Social Studies</label><input class='social' type='number' min='1' max='9'></input> </li>
+                            
+                        
+        
+                            </ul>
+                                    
+                        </div>
+          <button onclick="careerBusiness();">submit</button>
+        
+    
+      </>
 
       )
     }
