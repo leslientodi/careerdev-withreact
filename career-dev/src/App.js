@@ -8,6 +8,14 @@ function App() {
   const [introData , setProgram] = React.useState(
     {userName:"", program: ""}
   )
+  const [grades, setGrades] = React.useState(
+    {physics:"", chemistry:"", emaths:"", biology:"", ict:"", agric:"", geography:"",cmaths:"", english:"",intScience:"",social:"",
+      government:"", history:"", economics:"", fa:"", bm:"",costing:"",GKA:"", textiles:"", picture:"",cas:"", graphic:"", leather:"", catering:"", fan:"",
+      mil:""
+    }
+  )
+
+  console.log(grades)
 
   
 
@@ -266,12 +274,16 @@ function App() {
 
 
       )
+    } else{
+      setAppear(<p>Invalid program entered</p>)
     }
     
     
 
 
   }
+
+  
     
 
     
