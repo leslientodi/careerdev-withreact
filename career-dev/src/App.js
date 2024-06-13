@@ -37,7 +37,13 @@ function App() {
   function selectProgram(){
     
     if (upperProgram === "GENERAL SCIENCE"){
-     setAppear(<GenScience />)
+     setAppear(<><p>You are offering {upperProgram} </p> <h2>Now Enter Your Grades</h2> 
+     <GenScience />
+     
+     </>
+    )
+     
+     
     }
 
 
