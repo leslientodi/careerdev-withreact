@@ -5,6 +5,7 @@ import GenScience from './components/GenScience';
 import GenArts from './components/GenArts';
 import Business from './components/Business';
 import HomeEcons from './components/HomeEcons';
+import Visual from './components/Visual';
 
 
 function App() {
@@ -58,6 +59,10 @@ function App() {
       <HomeEcons />
       </>
       )
+    } else if (upperProgram === "VISUAL ARTS"){
+      setAppear(<><p>You are offering {upperProgram} </p> <h2>Now Enter Your Grades</h2> 
+      <Visual />
+      </>)
     }
 
 
