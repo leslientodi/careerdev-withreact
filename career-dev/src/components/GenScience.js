@@ -21,7 +21,7 @@ export default function GenScience() {
         
       }
 
-      console.log(grades.physics)
+      
 
 
 

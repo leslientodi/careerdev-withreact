@@ -2,15 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import React from "react";
 import GenScience from './components/GenScience';
+import GenArts from './components/GenArts';
 
 
 function App() {
   const [appear, setAppear] = React.useState("")
 
   const [introData , setProgram] = React.useState(
-    {userName:"", program: "",physics:"", chemistry:"", emaths:"", biology:"", ict:"", agric:"", geography:"",cmaths:"", english:"",intScience:"",social:"",
-    government:"", history:"", economics:"", fa:"", bm:"",costing:"",GKA:"", textiles:"", picture:"",cas:"", graphic:"", leather:"", catering:"", fan:"",
-    mil:""}
+    {userName:"", program: ""}
   )
   
   function handleInput(event) {
@@ -44,6 +43,10 @@ function App() {
     )
      
      
+    } else if (upperProgram === "GENERAL ARTS"){
+      setAppear(<><p>You are offering {upperProgram} </p> <h2>Now Enter Your Grades</h2> 
+      <GenArts />
+      </>)
     }
 
 
