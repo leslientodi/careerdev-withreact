@@ -5,8 +5,45 @@ import GenScience from './components/GenScience';
 
 
 function App() {
+  const [appear, setAppear] = React.useState("")
+
+  const [introData , setProgram] = React.useState(
+    {userName:"", program: "",physics:"", chemistry:"", emaths:"", biology:"", ict:"", agric:"", geography:"",cmaths:"", english:"",intScience:"",social:"",
+    government:"", history:"", economics:"", fa:"", bm:"",costing:"",GKA:"", textiles:"", picture:"",cas:"", graphic:"", leather:"", catering:"", fan:"",
+    mil:""}
+  )
   
+  function handleInput(event) {
+    const {name, value} = event.target
+    setProgram(prev => {
+      return {
+        ...prev,
+        [name]:  value
+      }
+    })
     
+    
+  }
+
+  
+
+  
+  
+  
+  const upper = introData.program;
+  const upperProgram = upper.toUpperCase();
+
+  
+  function selectProgram(){
+    
+    if (upperProgram === "GENERAL SCIENCE"){
+     setAppear(<GenScience />)
+    }
+
+
+  }
+
+  
 
     
 
@@ -29,16 +66,16 @@ function App() {
 
     
     
-    <input className='username' type='text' placeholder='Username' /*onChange={handleInput} name='userName' value={introData.userName}*/></input>
+    <input className='username' type='text' placeholder='Username' onChange={handleInput} name='userName' value={introData.userName}></input>
     <br></br>
 
-    <input className="program" type="text" placeholder="eg. General Science" /*onChange={handleInput} name='program' value={introData.program}*/></input>
+    <input className="program" type="text" placeholder="eg. General Science" onChange={handleInput} name='program' value={introData.program}></input>
     
 
-    <button /*onClick={selectProgram}*/>Submit</button>
+    <button onClick={selectProgram}>Submit</button>
 
     <section className="program-info"></section>
-    <GenScience />
+    {appear}
 
     <>
         
