@@ -3,6 +3,7 @@ import './App.css';
 import React from "react";
 import GenScience from './components/GenScience';
 import GenArts from './components/GenArts';
+import Business from './components/Business';
 
 
 function App() {
@@ -46,6 +47,10 @@ function App() {
     } else if (upperProgram === "GENERAL ARTS"){
       setAppear(<><p>You are offering {upperProgram} </p> <h2>Now Enter Your Grades</h2> 
       <GenArts />
+      </>)
+    } else if (upperProgram === "BUSINESS"){
+      setAppear(<><p>You are offering {upperProgram} </p> <h2>Now Enter Your Grades</h2> 
+      <Business />
       </>)
     }
 
