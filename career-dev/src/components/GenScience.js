@@ -1,12 +1,12 @@
 import React from "react";
-
+import FirstScience from "./FirstScience";
 
 export default function GenScience() {
-
+    const [appear, setAppear] = React.useState("")
     const [grades , setGrades] = React.useState(
-        {physics:"", chemistry:"", emaths:"", biology:"", ict:"", agric:"", geography:"",cmaths:"", english:"",intScience:"",social:"",
-        government:"", history:"", economics:"", fa:"", bm:"",costing:"",GKA:"", textiles:"", picture:"",cas:"", graphic:"", leather:"", catering:"", fan:"",
-        mil:""}
+        {physics:0, chemistry:0, emaths:0, biology:0, ict:0, agric:0, geography:0,cmaths:0, english:0,intScience:0,social:0,
+        government:0, history:0, economics:0, fa:0, bm:0,costing:0,GKA:0, textiles:0, picture:0,cas:0, graphic:0, leather:0, catering:0, fan:0,
+        mil:0}
       )
       
       function handleInput(event) {
@@ -20,6 +20,19 @@ export default function GenScience() {
         
         
       }
+
+      let content
+
+      
+
+      function careerScience() {
+        if (grades.chemistry == 1  /*&& grades.intScience < 3 && grades.cmaths === 1 && grades.english < 3 && grades.emaths < 3 && grades.english > 0 && grades.emaths>0 && grades.chemistry > 0 && grades.intScience>0 */){
+          content = <FirstScience />
+
+        } else {
+          console.log("error")
+        }
+      } 
 
       
 
@@ -47,7 +60,7 @@ export default function GenScience() {
                                   <br></br>
                                   <li className="courses"><label>Agriculture</label><input className='agric' type='number' min='1' max='9' onChange={handleInput} name='agric' value={grades.agric}></input> </li>
                                   <br></br>
-                                  <li className="courses"><label>Geography</label><input className='geography' type='number' min='1' max='9' onChange={handleInput} name='userName' value={grades.geography}></input> </li>
+                                  <li className="courses"><label>Geography</label><input className='geography' type='number' min='1' max='9' onChange={handleInput} name='geography' value={grades.geography}></input> </li>
                               </ul>
                               
                           
@@ -69,7 +82,9 @@ export default function GenScience() {
                               </ul>
                                       
                           </div>
-            <button>submit</button>
+            <button onClick={careerScience}>submit</button>
+            {content}
+            
           
         </>
     )
