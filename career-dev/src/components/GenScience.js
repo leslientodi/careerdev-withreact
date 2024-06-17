@@ -21,13 +21,13 @@ export default function GenScience() {
         
       }
 
-      let content
+      
 
       
 
       function careerScience() {
         if (grades.chemistry == 1  /*&& grades.intScience < 3 && grades.cmaths === 1 && grades.english < 3 && grades.emaths < 3 && grades.english > 0 && grades.emaths>0 && grades.chemistry > 0 && grades.intScience>0 */){
-          content = <FirstScience />
+          setAppear( <FirstScience />)
 
         } else {
           console.log("error")
@@ -83,7 +83,7 @@ export default function GenScience() {
                                       
                           </div>
             <button onClick={careerScience}>submit</button>
-            {content}
+            <div>{appear}</div>
             
           
         </>
