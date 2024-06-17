@@ -1,8 +1,9 @@
 import React from "react";
 import FirstScience from "./FirstScience";
 
+
 export default function GenScience() {
-    const [appear, setAppear] = React.useState("")
+    const [field, setField] = React.useState("")
     const [grades , setGrades] = React.useState(
         {physics:0, chemistry:0, emaths:0, biology:0, ict:0, agric:0, geography:0,cmaths:0, english:0,intScience:0,social:0,
         government:0, history:0, economics:0, fa:0, bm:0,costing:0,GKA:0, textiles:0, picture:0,cas:0, graphic:0, leather:0, catering:0, fan:0,
@@ -27,7 +28,13 @@ export default function GenScience() {
 
       function careerScience() {
         if (grades.chemistry == 1  /*&& grades.intScience < 3 && grades.cmaths === 1 && grades.english < 3 && grades.emaths < 3 && grades.english > 0 && grades.emaths>0 && grades.chemistry > 0 && grades.intScience>0 */){
-          setAppear( <FirstScience />)
+          setField( <FirstScience />
+
+            
+          )
+          
+          
+        
 
         } else {
           console.log("error")
@@ -82,8 +89,8 @@ export default function GenScience() {
                               </ul>
                                       
                           </div>
-            <button onClick={careerScience}>submit</button>
-            <div>{appear}</div>
+            <button onClick={careerScience} >submit</button>
+            <div>{field}</div>
             
           
         </>
