@@ -1,5 +1,8 @@
 import React from "react";
 import FirstScience from "./FirstScience";
+import Eng from "./Eng";
+import AllOnes from "./AllOnes";
+
 
 
 export default function GenScience() {
@@ -27,16 +30,26 @@ export default function GenScience() {
       
 
       function careerScience() {
-        if (grades.chemistry == 1  /*&& grades.intScience < 3 && grades.cmaths === 1 && grades.english < 3 && grades.emaths < 3 && grades.english > 0 && grades.emaths>0 && grades.chemistry > 0 && grades.intScience>0 */){
-          setField( <FirstScience />
+        if (grades.chemistry == 1  && grades.intScience < 3 && grades.cmaths == 1 && grades.english < 3 && grades.emaths < 3 && grades.english > 0 && grades.emaths>0 && grades.chemistry > 0 && grades.intScience>0 ){
+          if(grades.biology ==1 ){
+            setField( <FirstScience />
 
             
-          )
+            )
+
+          } else if (grades.physics == 1 ){
+            setField(<Eng />)
+
+          } else if(grades.physics == 1 && grades.biology == 1 && grades.chemistry ==1){
+            setField(<AllOnes />)
+          }
+          
           
           
         
 
-        } else {
+        } 
+        else {
           console.log("error")
         }
       } 
