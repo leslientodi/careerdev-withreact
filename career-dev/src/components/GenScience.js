@@ -5,6 +5,7 @@ import AllOnes from "./AllOnes";
 import Tech from "./Tech";
 import Chem from "./Chem";
 import Techmin from "./Techmin";
+import Medics from "./Medics";
 
 
 
@@ -60,11 +61,16 @@ export default function GenScience() {
             <Chem />
           )
 
-        } else if (grades.physics < 4 && grades.emaths < 4 && grades.english < 4 && grades.emaths > 0 && grades.english> 0 && grades.physics > 0 || grades.ict == 1 && grades.physics < 4 && grades.emaths < 4 && grades.english < 4 && grades.emaths > 0 && grades.english> 0 && grades.physics > 0 ){
+        } else if (grades.physics < 4 && grades.emaths < 3 && grades.english < 4 && grades.emaths > 0 && grades.english> 0 && grades.physics > 0 || grades.ict == 1 && grades.physics < 4 && grades.emaths < 4 && grades.english < 4 && grades.emaths > 0 && grades.english> 0 && grades.physics > 0 ){
           setField(
             <Techmin />
           )
-        } 
+        } else if (grades.intScience == 1 && grades.biology < 3 && grades.chemistry < 3 && grades.cmaths < 3 && grades.biology > 0 && grades.chemistry > 0 && grades.cmaths > 0){
+          setField(
+            <Medics />
+          )
+
+        }
         else {
           console.log("error")
         }
