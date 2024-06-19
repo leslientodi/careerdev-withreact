@@ -2,6 +2,7 @@ import React from "react";
 import FirstScience from "./FirstScience";
 import Eng from "./Eng";
 import AllOnes from "./AllOnes";
+import Tech from "./Tech";
 
 
 
@@ -48,7 +49,11 @@ export default function GenScience() {
           
         
 
-        } 
+        } else if (grades.physics == 1 && grades.emaths==1 || grades.ict == 1 && grades.physics < 3 && grades.emaths<3 && grades.physics > 0 && grades.emaths > 0){
+          setField(
+            <Tech />
+          )
+        }
         else {
           console.log("error")
         }
