@@ -3,6 +3,8 @@ import FirstScience from "./FirstScience";
 import Eng from "./Eng";
 import AllOnes from "./AllOnes";
 import Tech from "./Tech";
+import Chem from "./Chem";
+import Techmin from "./Techmin";
 
 
 
@@ -53,7 +55,16 @@ export default function GenScience() {
           setField(
             <Tech />
           )
-        }
+        } else if (grades.chemistry == 1 && grades.cmaths < 3 && grades.intScience < 3 && grades.physics < 3 && grades.cmaths > 0 && grades.intScience > 0 && grades.physics > 0)  {
+          setField(
+            <Chem />
+          )
+
+        } else if (grades.physics < 4 && grades.emaths < 4 && grades.english < 4 && grades.emaths > 0 && grades.english> 0 && grades.physics > 0 || grades.ict == 1 && grades.physics < 4 && grades.emaths < 4 && grades.english < 4 && grades.emaths > 0 && grades.english> 0 && grades.physics > 0 ){
+          setField(
+            <Techmin />
+          )
+        } 
         else {
           console.log("error")
         }
