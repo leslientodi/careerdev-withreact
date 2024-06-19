@@ -8,6 +8,8 @@ import Techmin from "./Techmin";
 import Medics from "./Medics";
 import Math from "./Math";
 import Land from "./Land";
+import English from "./English";
+import Agric from "./Agric";
 
 
 
@@ -80,6 +82,15 @@ export default function GenScience() {
           setField(
             <Land />
           )
+        } else if (grades.english == 1 & grades.social == 1){
+          setField(
+            <English />
+          )
+        } else if (grades.agric == 1){
+          setField(
+            <Agric />
+          )
+
         }
         else {
           console.log("error")
