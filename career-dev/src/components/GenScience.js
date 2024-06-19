@@ -6,6 +6,7 @@ import Tech from "./Tech";
 import Chem from "./Chem";
 import Techmin from "./Techmin";
 import Medics from "./Medics";
+import Math from "./Math";
 
 
 
@@ -70,6 +71,10 @@ export default function GenScience() {
             <Medics />
           )
 
+        }else if (grades.cmaths == 1 && grades.emaths ==1){
+          setField(
+            <Math />
+          )
         }
         else {
           console.log("error")
