@@ -27,6 +27,10 @@ function App() {
     
   }
 
+  function clearApp(){
+    setAppear(false);
+  }
+
   
 
   
@@ -102,7 +106,7 @@ function App() {
     <button onClick={selectProgram}>Submit</button>
 
     <section className="program-info"></section>
-    {appear}
+    {appear && <GenArts clearApp={clearApp} />}
 
     <>
         

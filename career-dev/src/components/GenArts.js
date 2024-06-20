@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function GenArts (){
+export default function GenArts ({clearApp}){
+    const [field, setField] = React.useState("")
 
     const [grades , setGrades] = React.useState(
         {physics:"", chemistry:"", emaths:"", biology:"", ict:"", agric:"", geography:"",cmaths:"", english:"",intScience:"",social:"",
@@ -18,6 +19,13 @@ export default function GenArts (){
         })
         
         
+      }
+
+      function careerGenArts() {
+        if (grades.government == 1){
+          setField()
+          clearApp()
+        }
       }
 
 
@@ -62,7 +70,8 @@ export default function GenArts (){
                             </ul>
                                     
                         </div>
-          <button /*onclick="careerGeneralArts();"*/>submit</button>
+          <button onClick={careerGenArts}>submit</button>
+          <div>{field}</div>
         
     
       </>
