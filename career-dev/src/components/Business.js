@@ -1,6 +1,8 @@
 import React from "react";
+import English from "./English";
 
 export default function Business() {
+    const [field, setField] = React.useState("")
     const [grades , setGrades] = React.useState(
         {physics:"", chemistry:"", emaths:"", biology:"", ict:"", agric:"", geography:"",cmaths:"", english:"",intScience:"",social:"",
         government:"", history:"", economics:"", fa:"", bm:"",costing:"",GKA:"", textiles:"", picture:"",cas:"", graphic:"", leather:"", catering:"", fan:"",
@@ -17,6 +19,22 @@ export default function Business() {
         })
         
         
+      }
+
+      function careerBusiness(){
+        if(grades.bm == 1 && grades.emaths < 4 && grades.cmaths < 3 && grades.fa<3 && grades.costing<3 && grades.emaths > 0 && grades.cmaths>0 && grades.fa>0 && grades.costing > 0){
+          setField(
+            <h2>Business Administration(Banking/Accounting/Finance)</h2>
+          )
+        } else if (grades.economics ==1 ){
+          setField(
+            <h2>BSc. Economics</h2>
+          )
+        } else if (grades.english == 1 & grades.social == 1){
+          setField(
+            <English />
+          )
+        }
       }
 
 
@@ -60,7 +78,8 @@ export default function Business() {
                             </ul>
                                     
                         </div>
-          <button /*onclick="careerBusiness();"*/>submit</button>
+          <button onClick={careerBusiness}>submit</button>
+          <div>{field}</div>
         
         
         </>
