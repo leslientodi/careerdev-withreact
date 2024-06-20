@@ -1,6 +1,9 @@
 import React from "react";
+import Nurse from "./Nurse";
+import English from "./English";
 
 export default function HomeEcons (){
+    const [field, setField] = React.useState("")
     const [grades , setGrades] = React.useState(
         {physics:"", chemistry:"", emaths:"", biology:"", ict:"", agric:"", geography:"",cmaths:"", english:"",intScience:"",social:"",
         government:"", history:"", economics:"", fa:"", bm:"",costing:"",GKA:"", textiles:"", picture:"",cas:"", graphic:"", leather:"", catering:"", fan:"",
@@ -17,6 +20,32 @@ export default function HomeEcons (){
         })
         
         
+      }
+
+      function careerHomeEcons(){
+        if (grades.catering == 1 && grades.mil < 3 && grades.mil > 0 ){
+          setField(
+            <>
+              <h2>Fashion Design</h2>
+              <h2>BA Industrial Arts</h2>
+            </>
+          )
+        } else if (grades.fan == 1 && grades.chemistry < 4 && grades.chemistry> 0){
+          setField(
+            <>
+              <h2>Bsc Dietetics</h2>
+              <h2>Bsc food science</h2>
+            </>
+          )
+        } else if(grades.biology == 1 && grades.intScience < 4 && grades.cmaths < 4 && grades.intScience > 0 && grades.cmaths > 0){
+          setField(
+            <Nurse />
+          )
+        } else if (grades.english == 1 & grades.social == 1){
+          setField(
+            <English />
+          )
+        } 
       }
 
 
@@ -60,7 +89,8 @@ export default function HomeEcons (){
                             </ul>
                                     
                         </div>
-          <button /*onclick="careerHomeEcons();"*/>submit</button>
+          <button onClick={careerHomeEcons}>submit</button>
+          <div>{field}</div>
         
     
         </>
