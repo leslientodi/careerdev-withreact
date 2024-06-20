@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Visual(){
+    const [field, setField] = React.useState("")
     const [grades , setGrades] = React.useState(
         {physics:"", chemistry:"", emaths:"", biology:"", ict:"", agric:"", geography:"",cmaths:"", english:"",intScience:"",social:"",
         government:"", history:"", economics:"", fa:"", bm:"",costing:"",GKA:"", textiles:"", picture:"",cas:"", graphic:"", leather:"", catering:"", fan:"",
@@ -17,6 +18,24 @@ export default function Visual(){
         })
         
         
+      }
+
+      function careerVisualArts(){
+        if (grades.GKA < 3 && grades.GKA> 0){
+          setField(
+            <h2>BA Fine Arts</h2>
+          )
+        } else if (grades.textiles < 3 && grades.textiles > 0 || grades.picture < 3 && grades.picture > 0 || grades.cas < 3 && grades.cas > 0 || grades.leather > 3 && grades.leather > 0 || grades.basketry < 3 && grades.basketry > 0){
+          setField(<h2>BA Industrial Arts</h2>)
+        } else if (grades.graphic < 3 && grades.graphic > 0){
+          setField(
+            <h2>BA Communication Design</h2>
+          )
+        } else (
+          setField(
+            <h2>No Career matches your info</h2>
+          )
+        )
       }
 
 
@@ -63,6 +82,8 @@ export default function Visual(){
                                 </ul>
                                         
                             </div>
-            <button /*onclick="careerVisualArts();"*/>submit</button>
+            <button onClick={careerVisualArts}>submit</button>
+            <div>{field}</div>
+
     </>)
 }
