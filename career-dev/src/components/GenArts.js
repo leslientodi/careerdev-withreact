@@ -1,6 +1,8 @@
 import React from "react";
+import Law from "./Law";
+import Econs from "./Econs";
 
-export default function GenArts ({clearApp}){
+export default function GenArts (){
     const [field, setField] = React.useState("")
 
     const [grades , setGrades] = React.useState(
@@ -22,9 +24,19 @@ export default function GenArts ({clearApp}){
       }
 
       function careerGenArts() {
-        if (grades.government == 1){
-          setField()
-          clearApp()
+        if (grades.government == 1 && grades.english < 3 && grades.social == 1 && grades.history < 3 && grades.history > 0 && grades.english > 0){
+          setField(
+            <Law />
+          )
+          
+        } else if (grades.cmaths < 3 && grades.economics < 3 && grades.cmaths > 0 && grades.economics > 0){
+          setField(
+            <Econs />
+          )
+        } else {
+          setField(
+            <h2>No Career matches your info</h2>
+          )
         }
       }
 
@@ -46,7 +58,7 @@ export default function GenArts ({clearApp}){
                         
                                 <li class="courses"><label>E-Maths</label><input class='emaths' type='number' min='1' max='9' onChange={handleInput} name='emaths' value={grades.emaths}></input> </li>
                                 <br></br>
-                                <li class="courses"><label>Economics</label><input class='economics' type='number' min='1' max='9' onChange={handleInput} name='physics' value={grades.physics}></input> </li>
+                                <li class="courses"><label>Economics</label><input class='economics' type='number' min='1' max='9' onChange={handleInput} name='economics' value={grades.economics}></input> </li>
                                 <br></br>
 
                               </ul>
@@ -72,6 +84,7 @@ export default function GenArts ({clearApp}){
                         </div>
           <button onClick={careerGenArts}>submit</button>
           <div>{field}</div>
+
         
     
       </>

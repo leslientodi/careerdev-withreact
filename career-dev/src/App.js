@@ -6,6 +6,7 @@ import GenArts from './components/GenArts';
 import Business from './components/Business';
 import HomeEcons from './components/HomeEcons';
 import Visual from './components/Visual';
+import BusAdmin from './components/BusAdmin';
 
 
 function App() {
@@ -106,7 +107,8 @@ function App() {
     <button onClick={selectProgram}>Submit</button>
 
     <section className="program-info"></section>
-    {appear && <GenArts clearApp={clearApp} />}
+    {appear}
+
 
     <>
         
@@ -114,7 +116,7 @@ function App() {
       </>
 
     
-    
+     
 
 
 
