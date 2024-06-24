@@ -115,12 +115,13 @@ export default function GenScience() {
     } else if (grades.cmaths == 1 && grades.emaths == 1) {
       setField(<Math />);
     } else if (
-      (grades.intScience == 1 &&
-        grades.biology < 4 &&
-        grades.biology > 0 &&
+      (grades.cmaths < 3 &&
+        grades.cmaths > 0 &&
+        grades.intScience < 4 &&
+        grades.intScience > 0 &&
         grades.chemistry < 4 &&
         grades.chemistry > 0) ||
-      grades.geography == 1
+      (grades.geography == 1 && grades.cmaths < 3 && grades.cmaths > 0)
     ) {
       setField(<Land />);
     } else if ((grades.english == 1) & (grades.social == 1)) {
