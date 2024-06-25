@@ -10,6 +10,7 @@ import Math from "./Math";
 import Land from "./Land";
 import English from "./English";
 import Agric from "./Agric";
+import Nurse from "./Nurse";
 
 export default function GenScience() {
   const [field, setField] = React.useState("");
@@ -126,8 +127,20 @@ export default function GenScience() {
       setField(<Land />);
     } else if ((grades.english == 1) & (grades.social == 1)) {
       setField(<English />);
-    } else if (grades.agric == 1) {
+    } else if (
+      grades.agric == 1 ||
+      (grades.intScience == 1 && grades.cmaths < 5 && grades.cmaths > 0)
+    ) {
       setField(<Agric />);
+    } else if (
+      grades.intScience < 3 &&
+      grades.cmaths < 4 &&
+      grades.biology < 4 &&
+      grades.intScience > 0 &&
+      grades.cmaths > 0 &&
+      grades.biology > 0
+    ) {
+      setField(<Nurse />);
     } else {
       console.log("error");
     }
