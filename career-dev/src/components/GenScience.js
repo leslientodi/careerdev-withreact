@@ -148,7 +148,7 @@ export default function GenScience() {
 
   return (
     <>
-      <div>
+      <div className="grades">
         <ul class="elective">
           <li class="courses">
             <h3>Elective Subjects</h3>

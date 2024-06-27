@@ -7,22 +7,22 @@ export default function Navbars() {
   return (
     <Navbar expand="lg" className="fixed-top bg-body-tertiary shadow">
       <Container>
-        <Navbar.Brand></Navbar.Brand>
+        <Navbar.Brand>Career Geeks</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-end w-100">
-            <Nav href="/" className="active text-uppercase">
+            <a href="/" className="nav-link active text-uppercase">
               Home
-            </Nav>
-            <Nav href="/menu" className=" text-uppercase">
+            </a>
+            <a href="/menu" className="nav-link text-uppercase">
               Menu
-            </Nav>
-            <Nav href="/about" className=" text-uppercase">
+            </a>
+            <a href="/about" className="nav-link text-uppercase">
               About
-            </Nav>
-            <Nav href="/contact" className=" text-uppercase">
+            </a>
+            <a href="/contact" className="nav-link text-uppercase">
               Contact
-            </Nav>
+            </a>
           </Nav>
         </Navbar.Collapse>
       </Container>

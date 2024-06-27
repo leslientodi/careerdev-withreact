@@ -1,0 +1,16 @@
+.App header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7)), url(../src/OIP.jpg);
+    background-size: cover;
+    
+    background-position: center center;
+}
+
+.App header h1,
+.App header h2 {
+    text-shadow: 2px 2px 8px #ffffff;
+    color: white;
+}
+
+.grades {
+    display: flex;
+}
