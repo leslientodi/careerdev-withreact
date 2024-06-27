@@ -75,34 +75,48 @@ function App() {
         <div className="container">
           <div className="row">
             <div className="col-sm-6 d-flex d-sm-block flex-column align-items-center">
-              <h2 className="mb-0 text-black fw-bold">
-                Find Your Best Career Path
-              </h2>
               <h1 className="mb-5 text-black fw-bold text-center text-sm-start">
                 Enter your program
               </h1>
-              <input
-                className="username"
-                type="text"
-                placeholder="Username"
-                onChange={handleInput}
-                name="userName"
-                value={introData.userName}
-              ></input>
+              <div className="input-group mb-3">
+                <span
+                  className="input-group-text"
+                  id="inputGroup-sizing-default"
+                >
+                  Username
+                </span>
+                <input
+                  className="form-control"
+                  type="text"
+                  onChange={handleInput}
+                  name="userName"
+                  value={introData.userName}
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                ></input>
+              </div>
+
               <br></br>
 
-              <input
-                className="program"
-                type="text"
-                placeholder="eg. General Science"
-                onChange={handleInput}
-                name="program"
-                value={introData.program}
-              ></input>
+              <div className="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">
+                  Program
+                </span>
+                <input
+                  className="form-control"
+                  type="text"
+                  placeholder="eg. General Science"
+                  onChange={handleInput}
+                  name="program"
+                  value={introData.program}
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                ></input>
+              </div>
 
               <button
                 onClick={selectProgram}
-                className="btn btn-success btn-lg"
+                className="btn btn-primary btn-sm"
               >
                 Submit
               </button>

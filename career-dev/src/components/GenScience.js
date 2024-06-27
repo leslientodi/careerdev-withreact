@@ -142,7 +142,11 @@ export default function GenScience() {
     ) {
       setField(<Nurse />);
     } else {
-      console.log("error");
+      setField(
+        <div class="alert alert-danger" role="alert">
+          No Career matches your grades
+        </div>
+      );
     }
   }
 
@@ -151,8 +155,9 @@ export default function GenScience() {
       <div className="grades">
         <ul class="elective">
           <li class="courses">
-            <h3>Elective Subjects</h3>
+            <span class="badge text-bg-primary">Elective Subjects</span>
           </li>
+          <br></br>
           <li className="input-group mb-3">
             <span className="input-group-text" id="inputGroup-sizing-sm">
               Physics
@@ -276,8 +281,9 @@ export default function GenScience() {
 
         <ul>
           <li class="courses">
-            <h3>Core Subjects</h3>
+            <span class="badge text-bg-primary">Core Subjects</span>
           </li>
+          <br></br>
           <li className="input-group mb-3">
             <span className="input-group-text" id="inputGroup-sizing-sm">
               C-Maths
@@ -347,7 +353,9 @@ export default function GenScience() {
           </li>
         </ul>
       </div>
-      <button onClick={careerScience}>submit</button>
+      <button onClick={careerScience} className="btn btn-outline-primary">
+        submit
+      </button>
       <div>{field}</div>
     </>
   );
