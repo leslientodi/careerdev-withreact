@@ -153,93 +153,123 @@ export default function GenScience() {
           <li class="courses">
             <h3>Elective Subjects</h3>
           </li>
-          <li class="courses">
-            <label>Physics</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              Physics
+            </span>
             <input
-              className="physics"
+              className="form-control"
               type="number"
+              min="1"
+              max="9"
               onChange={handleInput}
               name="physics"
               value={grades.physics}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
           <br></br>
-          <li className="courses">
-            <label>Chemistry</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              Chemistry
+            </span>
             <input
-              className="chemistry"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="chemistry"
               value={grades.chemistry}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
           <br></br>
 
-          <li className="courses">
-            <label>E-Maths</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              E-maths
+            </span>
             <input
-              className="emaths"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="emaths"
               value={grades.emaths}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
           <br></br>
-          <li className="courses">
-            <label>Biology</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              Biology
+            </span>
             <input
-              className="biology"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="biology"
               value={grades.biology}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
           <br></br>
-          <li className="courses">
-            <label>ICT</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              ICT
+            </span>
             <input
-              className="ict"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="ict"
               value={grades.ict}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
           <br></br>
-          <li className="courses">
-            <label>Agriculture</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              Agriculture
+            </span>
             <input
-              className="agric"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="agric"
               value={grades.agric}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
           <br></br>
-          <li className="courses">
-            <label>Geography</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              Geography
+            </span>
             <input
-              className="geography"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="geography"
               value={grades.geography}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
         </ul>
@@ -248,55 +278,71 @@ export default function GenScience() {
           <li class="courses">
             <h3>Core Subjects</h3>
           </li>
-          <li class="courses">
-            <label>C-Maths</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              C-Maths
+            </span>
             <input
-              class="cmaths"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="cmaths"
               value={grades.cmaths}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
           <br></br>
-          <li class="courses">
-            <label>English</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              English
+            </span>
             <input
-              class="english"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="english"
               value={grades.english}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
           <br></br>
-          <li class="courses">
-            <label>Int-Science</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              Int. Science
+            </span>
             <input
-              class="intScience"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="intScience"
               value={grades.intScience}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
           <br></br>
-          <li class="courses">
-            <label>Social Studies</label>
+          <li className="input-group mb-3">
+            <span className="input-group-text" id="inputGroup-sizing-sm">
+              Social studies
+            </span>
             <input
-              class="social"
+              className="form-control"
               type="number"
               min="1"
               max="9"
               onChange={handleInput}
               name="social"
               value={grades.social}
+              aria-label="sizing example input"
+              aria-describedby="inputGroup-sizing-default"
             ></input>{" "}
           </li>
         </ul>
