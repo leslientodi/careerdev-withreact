@@ -144,7 +144,7 @@ export default function GenScience() {
     } else {
       setField(
         <div class="alert alert-danger" role="alert">
-          No Career matches your grades
+          No Career matches your info
         </div>
       );
     }

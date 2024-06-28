@@ -34,31 +34,38 @@ export default function AllOnes() {
   }
 
   return (
-    <div className="menu-section py-5 text-ligth shadow">
-      <div className="container d-flex flex-column align-items-center">
-        <h2>Select your field of interest</h2>
-        <div className="col-lg-6 d-flex flex-column align-items-center mb-5 mb-lg-0">
-          <select
-            id="field"
-            value={career.field}
-            onChange={handleInput}
-            name="field"
-          >
-            <option>-- Choose field --</option>
-            <option>Heat and Mechanics</option>
-            <option>Electricity</option>
-            <option>Strength Of Materials</option>
-            <option>Thermodynamics</option>
-            <option>Human Anatomy</option>
-            <option>Organic Chemistry</option>
-            <option>Lab Equipments</option>
-          </select>
-          <button class="submit" onClick={selectField}>
-            Submit
-          </button>
+    <div className="App">
+      <div className="menu-section py-5 text-ligth shadow ">
+        <div className="container ">
+          <h2 className=" text-uppercase fw-bold">
+            Select your field of interest
+          </h2>
+          <div className="row mb-5 w-100">
+            <div className="align-items-center">
+              <select
+                className="form-select"
+                aria-label="Default select example"
+                id="field"
+                value={career.field}
+                onChange={handleInput}
+                name="field"
+              >
+                <option>-- Choose field --</option>
+                <option>Heat and Mechanics</option>
+                <option>Electricity</option>
+                <option>Strength Of Materials</option>
+                <option>Thermodynamics</option>
+                <option>Human Anatomy</option>
+                <option>Organic Chemistry</option>
+                <option>Lab Equipments</option>
+              </select>
+              <button className="btn btn-outline-primary" onClick={selectField}>
+                Submit
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-
       {degree}
     </div>
   );

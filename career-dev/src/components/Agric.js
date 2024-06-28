@@ -28,22 +28,34 @@ export default function Agric() {
   }
 
   return (
-    <>
-      <h2>Select your field of interest</h2>
-      <select
-        id="field"
-        value={career.field}
-        onChange={handleInput}
-        name="field"
-      >
-        <option>-- Choose field --</option>
-        <option>Animal husbandry</option>
-        <option>Animal & Crop production</option>
-      </select>
-      <button class="submit" onClick={selectField}>
-        Submit
-      </button>
+    <div className="App">
+      <div className="menu-section py-5 text-ligth shadow ">
+        <div className="container ">
+          <h2 className=" text-uppercase fw-bold">
+            Select your field of interest
+          </h2>
+          <div className="row mb-5 w-100">
+            <div className="align-items-center">
+              <select
+                className="form-select"
+                aria-label="Default select example"
+                id="field"
+                value={career.field}
+                onChange={handleInput}
+                name="field"
+              >
+                <option>-- Choose field --</option>
+                <option>Animal husbandry</option>
+                <option>Animal & Crop production</option>
+              </select>
+              <button className="btn btn-outline-primary" onClick={selectField}>
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       {degree}
-    </>
+    </div>
   );
 }
