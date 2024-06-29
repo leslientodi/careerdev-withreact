@@ -27,9 +27,9 @@ export default function Eng() {
     }
   }
   return (
-    <div className="App">
+    <>
       <div className="menu-section py-5 text-ligth shadow ">
-        <div className="container ">
+        <div className="container">
           <h2 className=" text-uppercase fw-bold">
             Select your field of interest
           </h2>
@@ -56,7 +56,12 @@ export default function Eng() {
           </div>
         </div>
       </div>
-      {degree}
-    </div>
+
+      <div className="degree py-5 text-ligth shadow">
+        <div className="col-sm-6 d-flex d-sm-block flex-column align-items-center">
+          {degree}
+        </div>
+      </div>
+    </>
   );
 }

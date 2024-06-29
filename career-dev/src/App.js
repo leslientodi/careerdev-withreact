@@ -127,7 +127,7 @@ function App() {
 
       <div className="container my-5">
         <div className="row">
-          <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center">
+          <div className="align-items-center justify-content-center">
             <section className="program-info"></section>
             {appear}
           </div>

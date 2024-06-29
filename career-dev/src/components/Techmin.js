@@ -54,6 +54,7 @@ export default function Techmin() {
           </div>
         </div>
       </div>
+      <div>{degree}</div>
       {degree}
     </div>
   );
