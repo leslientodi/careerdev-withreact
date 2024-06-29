@@ -1,5 +1,7 @@
 import React from "react";
 import English from "./English";
+import Econs from "./Econs";
+import BusAdmin from "./BusAdmin";
 
 export default function Business() {
   const [field, setField] = React.useState("");
@@ -54,9 +56,9 @@ export default function Business() {
       grades.fa > 0 &&
       grades.costing > 0
     ) {
-      setField(<h2>Business Administration(Banking/Accounting/Finance)</h2>);
+      setField(<BusAdmin />);
     } else if (grades.economics == 1) {
-      setField(<h2>BSc. Economics</h2>);
+      setField(<Econs />);
     } else if ((grades.english == 1) & (grades.social == 1)) {
       setField(<English />);
     } else {

@@ -44,7 +44,13 @@ export default function Visual() {
 
   function careerVisualArts() {
     if (grades.GKA < 3 && grades.GKA > 0) {
-      setField(<h2>BA Fine Arts</h2>);
+      setField(
+        <div className="degree py-5 text-ligth shadow">
+          <div className="col-sm-6 d-flex d-sm-block flex-column align-items-center">
+            <h2>BA Fine Arts</h2>
+          </div>
+        </div>
+      );
     } else if (
       (grades.textiles < 3 && grades.textiles > 0) ||
       (grades.picture < 3 && grades.picture > 0) ||
@@ -54,7 +60,13 @@ export default function Visual() {
     ) {
       setField(<h2>BA Industrial Arts</h2>);
     } else if (grades.graphic < 3 && grades.graphic > 0) {
-      setField(<h2>BA Communication Design</h2>);
+      setField(
+        <div className="degree py-5 text-ligth shadow">
+          <div className="col-sm-6 d-flex d-sm-block flex-column align-items-center">
+            <h2>BA Communication Design</h2>
+          </div>
+        </div>
+      );
     } else
       setField(
         <div class="alert alert-danger" role="alert">

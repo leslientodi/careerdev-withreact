@@ -19,5 +19,30 @@
 
 .menu-section h2 {
     text-align: center;
+    padding-top: 250px;
 }
 
+.degree h2{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    font-size: 50px;
+    
+}
+
+.menu-section button{
+    
+    margin-bottom: 250px;
+}
+
+.degree{
+    
+    margin-left: -100px;
+    margin-right: -100px;
+}
+
+.menu-section{
+    margin-left: -100px;
+    margin-right: -100px;
+}

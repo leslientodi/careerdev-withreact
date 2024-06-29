@@ -57,10 +57,12 @@ export default function HomeEcons() {
       grades.chemistry > 0
     ) {
       setField(
-        <>
-          <h2>Bsc Dietetics</h2>
-          <h2>Bsc food science</h2>
-        </>
+        <div className="degree py-5 text-ligth shadow">
+          <div className="col-sm-6 d-flex d-sm-block flex-column align-items-center">
+            <h2>Bsc Dietetics</h2>
+            <h2>Bsc food science</h2>
+          </div>
+        </div>
       );
     } else if (
       grades.biology == 1 &&

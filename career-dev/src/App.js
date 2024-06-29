@@ -127,14 +127,14 @@ function App() {
 
       <div className="container my-5">
         <div className="row">
-          <div className="align-items-center justify-content-center">
-            <section className="program-info"></section>
-            {appear}
-          </div>
+          <section className="program-info"></section>
+          {appear}
         </div>
       </div>
 
-      <></>
+      <footer className="bg-body-tertiary">
+        <p className="p-3 m-0 text-center">copyright @ made by Leslie Ntodi</p>
+      </footer>
     </div>
   );
 }

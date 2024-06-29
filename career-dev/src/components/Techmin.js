@@ -54,8 +54,11 @@ export default function Techmin() {
           </div>
         </div>
       </div>
-      <div>{degree}</div>
-      {degree}
+      <div className="degree py-5 text-ligth shadow">
+        <div className="col-sm-6 d-flex d-sm-block flex-column align-items-center">
+          {degree}
+        </div>
+      </div>
     </div>
   );
 }
